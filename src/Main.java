@@ -7,11 +7,15 @@ public class Main {
         String shiftedAlphabet = alphabet.substring(shiftKey) + alphabet.substring(0, shiftKey);
 
         for(int i = 0; i < input.length(); i++){
-            char ch = input.toUpperCase().charAt(i);
-            int idx = alphabet.indexOf(ch);
+            char ch = input.charAt(i);
+            int idx = alphabet.indexOf(Character.toUpperCase(ch));
             if(idx >= 0) {
                 char newChar = shiftedAlphabet.charAt(idx);
-                encrypted.append(newChar);
+                if(Character.isLowerCase(ch)) {
+                    encrypted.append(Character.toLowerCase(newChar));
+                } else {
+                    encrypted.append(newChar);
+                }
             } else {
                 encrypted.append(ch);
             }
@@ -27,11 +31,15 @@ public class Main {
         String shiftedAlphabet2 = shiftedAlphabet1.substring(key2) + shiftedAlphabet1.substring(0, key2);
 
         for(int i = 0; i < input.length(); i++){
-            char ch = input.toUpperCase().charAt(i);
-            int idx = alphabet.indexOf(ch);
+            char ch = input.charAt(i);
+            int idx = alphabet.indexOf(Character.toUpperCase(ch));
             if(idx >= 0) {
                 char newChar = shiftedAlphabet2.charAt(idx);
-                encrypted.append(newChar);
+                if(Character.isLowerCase(ch)) {
+                    encrypted.append(Character.toLowerCase(newChar));
+                } else {
+                    encrypted.append(newChar);
+                }
             } else {
                 encrypted.append(ch);
             }
@@ -57,7 +65,7 @@ public class Main {
         }
     }
     public static void main(String[] args) {
-        String decrypted = multiKeyCesarCypher(8, 21, "At noon be in the conference room with your hat on for a surprise party. YELL LOUD!");
-        System.out.println(decrypted.toLowerCase());
+        String decrypted = cesarCypher(21, "At noon be in the conference room with your hat on for a surprise party. YELL LOUD!");
+        System.out.println(decrypted);
     }
 }
