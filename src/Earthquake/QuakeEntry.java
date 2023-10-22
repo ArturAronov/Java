@@ -1,4 +1,4 @@
-package EarthquakeMagnitudeDistance;
+package Earthquake;
 
 public class QuakeEntry implements Comparable<QuakeEntry>{
 	

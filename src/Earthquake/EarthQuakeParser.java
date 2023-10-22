@@ -1,4 +1,4 @@
-package EarthquakeMagnitudeDistance;
+package Earthquake;
 
 import java.io.File;
 import java.io.IOException;
