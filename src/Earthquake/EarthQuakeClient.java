@@ -3,6 +3,16 @@ package Earthquake;
 import java.util.*;
 
 public class EarthQuakeClient {
+    public ArrayList<QuakeEntry> filter(ArrayList<QuakeEntry> quakeData, Filter f) {
+        ArrayList<QuakeEntry> answer = new ArrayList<QuakeEntry>();
+        for(QuakeEntry qe : quakeData) {
+            if (f.satisfies(qe)) {
+                answer.add(qe);
+            }
+        }
+
+        return answer;
+    }
 
     public static double[] largestMagnitude(ArrayList<QuakeEntry> quakeData){
         double[] result = new double[quakeData.size()];
