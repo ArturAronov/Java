@@ -3,7 +3,7 @@ package Earthquake;
 import java.util.Arrays;
 
 public class SelectionSort {
-    private final int[] test = {7, 3, 2, 8, 1, 4};
+    private final int[] test = {2, 4, 5, 9, 8, 1};
 
     public int[] selectionSort(){
         for(int i = 0; i < test.length; i++){

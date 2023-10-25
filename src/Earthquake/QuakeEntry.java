@@ -32,8 +32,11 @@ public class QuakeEntry implements Comparable<QuakeEntry>{
 		return depth;
 	}
 
-	@Override
+//	@Override
 	public int compareTo(QuakeEntry loc) {
+		if (Double.compare(magnitude, loc.getMagnitude()) == 0) {
+			return Double.compare(depth, loc.getDepth());
+		}
 		return Double.compare(magnitude, loc.getMagnitude());
 	}
 

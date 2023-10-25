@@ -4,7 +4,7 @@ import java.util.*;
 
 public class BubbleSort {
 //    private static ArrayList<QuakeEntry> earthQuakeList;
-    private static int[] test = {7, 3, 2, 8, 1, 4};
+    private static int[] test = {4, 2, 5, 9, 8, 1};
 
     public int[] bubbleSort(){
         for(int i = 0; i < test.length - 1; i++) {
