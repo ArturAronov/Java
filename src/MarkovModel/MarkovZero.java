@@ -2,7 +2,7 @@ package MarkovModel;
 
 import java.util.Random;
 
-public class MarkovZero {
+public class MarkovZero implements IMarkovModel {
     private static String myText;
     private static Random myRandom;
 
